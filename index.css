@@ -1,0 +1,4 @@
+/* Base styles – Tailwind CDN handles utilities */
+#root {
+  min-height: 100vh;
+}
