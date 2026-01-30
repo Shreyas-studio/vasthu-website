@@ -31,14 +31,14 @@ const App: React.FC = () => {
             <p className="text-gray-400 uppercase tracking-[0.4em] text-[10px] font-bold">Iconic Vertical Living</p>
           </div>
           <div className="group">
-            <h3 className="text-5xl green-text serif mb-3 font-light group-hover:scale-105 transition-transform duration-500">3, 4 & 5 BHK</h3>
+            <h3 className="text-5xl green-text serif mb-3 font-light group-hover:scale-105 transition-transform duration-500">3, 4, 5 BHK</h3>
             <div className="w-8 h-px bg-[#1A3C34]/20 mx-auto mb-4"></div>
             <p className="text-gray-400 uppercase tracking-[0.4em] text-[10px] font-bold">Spacious Luxury Residences</p>
           </div>
           <div className="group">
-            <h3 className="text-5xl green-text serif mb-3 font-light group-hover:scale-105 transition-transform duration-500">80% Open Spaces</h3>
+            <h3 className="text-5xl green-text serif mb-3 font-light group-hover:scale-105 transition-transform duration-500">270°</h3>
             <div className="w-8 h-px bg-[#1A3C34]/20 mx-auto mb-4"></div>
-            <p className="text-gray-400 uppercase tracking-[0.4em] text-[10px] font-bold">Nature-Centric Living</p>
+            <p className="text-gray-400 uppercase tracking-[0.4em] text-[10px] font-bold">Breathtaking Vistas</p>
           </div>
         </div>
       </section>
@@ -101,5 +101,6 @@ const App: React.FC = () => {
 };
 
 export default App;
+
 
 
