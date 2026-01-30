@@ -31,7 +31,7 @@ const App: React.FC = () => {
             <p className="text-gray-400 uppercase tracking-[0.4em] text-[10px] font-bold whitespace-nowrap">Iconic Vertical Living</p>
           </div>
           <div className="md:border-r border-gray-100 group">
-            <h3 className="text-5xl green-text serif mb-3 font-light group-hover:scale-105 transition-transform duration-500 whitespace-nowrap">3, 4, 5 BHK</h3>
+            <h3 className="quick-summary-stat text-5xl green-text mb-3 font-light group-hover:scale-105 transition-transform duration-500 whitespace-nowrap">3, 4, 5 BHK</h3>
             <div className="w-8 h-px bg-[#1A3C34]/20 mx-auto mb-4"></div>
             <p className="text-gray-400 uppercase tracking-[0.4em] text-[10px] font-bold whitespace-nowrap">Spacious Luxury Residences</p>
           </div>
