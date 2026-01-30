@@ -19,7 +19,7 @@ const App: React.FC = () => {
       
       {/* Quick Summary Section */}
       <section className="py-20 bg-[#F9FBFA] border-y border-gray-100">
-        <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
+        <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 text-center">
           <div className="group">
             <h3 className="text-5xl green-text serif mb-3 font-light group-hover:scale-105 transition-transform duration-500">2026</h3>
             <div className="w-8 h-px bg-[#1A3C34]/20 mx-auto mb-4"></div>
@@ -101,4 +101,5 @@ const App: React.FC = () => {
 };
 
 export default App;
+
 
