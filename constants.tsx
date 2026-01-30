@@ -5,8 +5,8 @@ import { Amenity, GalleryImage, FloorPlan } from './types';
 /** Upload your logo to /images/logo.png in CloudPanel */
 export const SITE_LOGO_URL = '/images/logo.png';
 
-/** Upload your hero banner to /images/banner.jpg in CloudPanel */
-export const BANNER_IMAGE_URL = '/images/banner.jpg';
+/** Upload your hero banner to /images/Banner.JPG in public folder */
+export const BANNER_IMAGE_URL = '/images/Banner.JPG';
 
 /** Upload gallery images to /images/gallery/ (g1.jpg, g2.jpg, ...) in CloudPanel */
 export const GALLERY_IMAGE_BASE = '/images/gallery';
