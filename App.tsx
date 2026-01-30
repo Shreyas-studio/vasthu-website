@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -10,6 +9,7 @@ import Specification from './components/Specification';
 import Location from './components/Location';
 import ContactForm from './components/ContactForm';
 import PopupForm from './components/PopupForm';
+import { FOOTER_LOGO_URL } from './constants';
 
 const App: React.FC = () => {
   return (
@@ -51,47 +51,42 @@ const App: React.FC = () => {
       <Location />
       <ContactForm />
 
-      <footer className="py-20 bg-[#1A3C34] text-white">
+      <footer className="py-16 bg-[#1A2E2A] text-white">
         <div className="container mx-auto px-6">
-            <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
-                <div>
-                  <div className="text-3xl font-bold tracking-[0.3em] text-white serif mb-6">AURELIA</div>
-                  <p className="text-white/40 max-w-sm text-sm font-light leading-relaxed">
-                    Setting the gold standard for high-end residential developments globally. Luxury defined by nature.
-                  </p>
-                </div>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-12 text-[10px] uppercase tracking-[0.3em] font-bold">
-                    <div className="flex flex-col gap-4">
-                        <span className="text-white/20">Project</span>
-                        <a href="#hero" className="hover:text-white/60 transition-colors">Home</a>
-                        <a href="#features" className="hover:text-white/60 transition-colors">Features</a>
-                        <a href="#amenities" className="hover:text-white/60 transition-colors">Amenities</a>
-                    </div>
-                    <div className="flex flex-col gap-4">
-                        <span className="text-white/20">Details</span>
-                        <a href="#floorplans" className="hover:text-white/60 transition-colors">Floorplans</a>
-                        <a href="#specification" className="hover:text-white/60 transition-colors">Spec Sheet</a>
-                        <a href="#location" className="hover:text-white/60 transition-colors">Location</a>
-                    </div>
-                    <div className="flex flex-col gap-4">
-                        <span className="text-white/20">Social</span>
-                        <a href="#" className="hover:text-white/60 transition-colors">Instagram</a>
-                        <a href="#" className="hover:text-white/60 transition-colors">LinkedIn</a>
-                    </div>
-                </div>
+          <div className="flex flex-col md:flex-row md:items-start gap-10 mb-12 max-w-4xl">
+            <div className="shrink-0">
+              <img
+                src={FOOTER_LOGO_URL}
+                alt="SNN Raj Corp"
+                className="h-10 w-auto object-contain object-left logo-img"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = 'none';
+                  const fallback = (e.target as HTMLImageElement).nextElementSibling;
+                  if (fallback) (fallback as HTMLElement).classList.remove('hidden');
+                }}
+              />
+              <span className="serif text-2xl font-semibold text-white hidden logo-fallback">SNN RAJ CORP</span>
             </div>
-            <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-                <div className="text-white/30 text-[9px] uppercase tracking-[0.3em]">
-                    &copy; 2024 Aurelia Residences. A masterpiece by Aurelia Group.
-                </div>
-                <div className="flex items-center gap-6">
-                   <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-xl">🌲</div>
-                   <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-xl">🏛️</div>
-                </div>
+            <div>
+              <p className="text-white text-sm md:text-base font-semibold uppercase tracking-wider mb-4">
+                Book Your Site Visit Before Availability Fills Up
+              </p>
+              <h3 className="serif text-xl md:text-2xl text-white font-light mb-4">
+                A Legacy of Perfection.
+              </h3>
+              <p className="text-white/70 text-sm md:text-base leading-relaxed max-w-xl">
+                SNN Raj Corp brings a heritage of delivering 40 projects and 12 million sq. ft. of perfection. With a team dedicated to elevating lives, we invite you to a place where dreams take shape and memories are made.
+              </p>
             </div>
-            <div className="mt-16 text-center text-[9px] text-white/10 max-w-5xl mx-auto leading-relaxed uppercase tracking-[0.2em] italic">
-                Artistic renderings shown are for conceptual representation. Final specifications are subject to development approvals and construction adjustments.
-            </div>
+          </div>
+          <div className="pt-8 border-t border-white/10 text-center space-y-2">
+            <p className="text-white/60 text-xs uppercase tracking-widest">
+              All Right Reserved By SNN RAJ CORP © 2025
+            </p>
+            <p className="text-white/40 text-[10px] uppercase tracking-wider">
+              RERA NO. - PRM/KA/RERA/1251/308/PR/140622/004983
+            </p>
+          </div>
         </div>
       </footer>
 

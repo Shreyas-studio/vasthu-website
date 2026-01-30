@@ -1,9 +1,12 @@
 
 import React from 'react';
-import { Amenity, GalleryImage, FloorPlan } from './types';
+import { GalleryImage, FloorPlan } from './types';
 
 /** Upload your logo to /images/logo.png in CloudPanel */
 export const SITE_LOGO_URL = '/images/logo.png';
+
+/** Footer logo (SNN RAJ CORP). Place in public/images/ */
+export const FOOTER_LOGO_URL = '/images/snn-raj-corp-logo.png';
 
 /** Upload your hero banner to /images/Banner.JPG in public folder */
 export const BANNER_IMAGE_URL = '/images/Banner.JPG';
@@ -14,43 +17,50 @@ export const GALLERY_IMAGE_BASE = '/images/gallery';
 /** Upload floor plan images to /images/floorplans/ (f1.jpg, f2.jpg, f3.jpg) in CloudPanel */
 export const FLOORPLAN_IMAGE_BASE = '/images/floorplans';
 
-export const AMENITIES: Amenity[] = [
+/** Image for Why Aurelia / Highlights section (two-column layout). Place in public/images/ */
+export const WHY_SECTION_IMAGE_URL = '/images/why-section.jpg';
+
+/**
+ * Google Sheets form submission URL.
+ * Set up: Google Sheet → Extensions → Apps Script → deploy as Web app (doPost).
+ * Script appends: timestamp, name, email, phone, units, source.
+ */
+export const FORM_SUBMIT_URL = ''; // e.g. 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec'
+
+export const UNIT_OPTIONS = ['3 BHK', '4 BHK', '5 BHK'] as const;
+
+/** Club Oasis amenities – icon, category and description for Amenities section */
+export const AMENITIES_LIST: { icon: string; category: string; description: string }[] = [
   {
-    id: '1',
-    title: 'Infinity Pool',
-    description: 'Breathtaking rooftop pool with temperature control and panoramic city views.',
-    icon: '🌊'
+    icon: '🧘',
+    category: 'Wellness',
+    description: 'PRANA – The Spa Retreat featuring massage facilities, steam, sauna, and jacuzzi.',
   },
   {
-    id: '2',
-    title: 'Zen Garden',
-    description: 'A meticulously landscaped space for meditation and relaxation.',
-    icon: '🧘'
+    icon: '🌊',
+    category: 'The Lagoon',
+    description: 'A temperature-controlled swimming pool offering serene water views.',
   },
   {
-    id: '3',
-    title: 'Private Theatre',
-    description: 'A 24-seater Dolby Atmos equipped private screening room.',
-    icon: '🎬'
+    icon: '🥃',
+    category: 'Social Life',
+    description: 'The Oak & Ember cigar lounge and The Scoops—an architecturally recessed enclave overlooking the lake for collaboration and conversation.',
   },
   {
-    id: '4',
-    title: 'Elite Gym',
-    description: 'State-of-the-art fitness center with personal training services.',
-    icon: '🏋️'
+    icon: '🎬',
+    category: 'Entertainment',
+    description: 'Private Mini Theatre and a dedicated Indoor Games zone including "The Queen\'s Den" and "The Game Lounge".',
   },
   {
-    id: '5',
-    title: 'Cigar Lounge',
-    description: 'An exclusive sanctuary for business meetings and casual conversations.',
-    icon: '🚬'
+    icon: '🎾',
+    category: 'Active Living',
+    description: 'The Arena, featuring outdoor cricket, tennis, and basketball courts.',
   },
   {
-    id: '6',
-    title: 'Smart Homes',
-    description: 'Fully automated living spaces with voice-controlled lighting and climate.',
-    icon: '📱'
-  }
+    icon: '🏛️',
+    category: 'Club House',
+    description: 'Club Oasis is a sanctuary curated for leisure, wellness, and quiet indulgence.',
+  },
 ];
 
 export const GALLERY: GalleryImage[] = [
@@ -69,18 +79,17 @@ export const FLOOR_PLANS: FloorPlan[] = [
 ];
 
 export const SPECIFICATIONS = [
-  { category: 'Structure', details: 'R.C.C. framed structure with earthquake resistance as per Seismic Zone II.' },
-  { category: 'Flooring', details: 'Imported Italian Marble in Living, Dining, and Foyer. Engineered wooden flooring in Master Bedrooms.' },
-  { category: 'Doors', details: '8-feet high Teak wood main door with smart biometric security lock.' },
-  { category: 'Windows', details: 'Sound-proof UPVC windows with performance glass and motorized blinds.' },
-  { category: 'Kitchen', details: 'Customized modular kitchen with quartz countertop and built-in appliances from Miele.' },
-  { category: 'Bathroom', details: 'Designer bathrooms with sanitary ware from Kohler and CP fittings from Gessi.' }
+  { category: 'Elegant Finishes', details: 'Imported Marble flooring in living and dining areas; Wooden Flooring in the Master Bedroom.' },
+  { category: 'Smart Living', details: 'Secure digital locks with biometric access and color display video door phones in every apartment.' },
+  { category: 'Advanced Design', details: 'Acoustic EPDM seals for enhanced sound insulation and performance glass for superior heat insulation.' },
+  { category: 'Superior Height', details: 'All doors and windows are upgraded to a height of 2.3m for enhanced ventilation and light.' },
 ];
 
-export const LOCATION_POINTS = [
-  { title: 'Airport', distance: '15 Mins' },
-  { title: 'Financial District', distance: '10 Mins' },
-  { title: 'Global Mall', distance: '5 Mins' },
-  { title: 'Prestige School', distance: '8 Mins' },
-  { title: 'Metro Station', distance: '2 Mins' }
+/** Location section – category and detail for each point */
+export const LOCATION_POINTS: { title: string; detail: string }[] = [
+  { title: 'Metro Connectivity', detail: 'Only 2 kms from the Metro station.' },
+  { title: 'Major Hubs', detail: '7 minutes from Bannerghatta Main Road and 10 minutes from Silk Board.' },
+  { title: 'Education', detail: '5 minutes from IIM Bangalore and Presidency School; near Vibgyor and Ekya Schools.' },
+  { title: 'Healthcare', detail: '7 minutes from Fortis and Apollo Hospitals.' },
+  { title: 'Leisure', detail: '8 minutes from Vega City Mall and 10 minutes from Meenakshi Mall.' },
 ];
